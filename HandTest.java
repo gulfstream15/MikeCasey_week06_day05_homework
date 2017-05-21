@@ -16,6 +16,11 @@ public class HandTest {
   }
 
   @Test
+  public void playerName() {
+    assertEquals("Mike", hand.getPlayerName());
+  }
+
+  @Test
   public void handHasSize() {
     deck = new Deck();
     hand.addCardToHandFromDeck();

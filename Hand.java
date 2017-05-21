@@ -38,10 +38,11 @@ public class Hand {
       this.cardSuit = card.getSuit();
       this.cardRank = card.getRank();
       this.cardValue = card.getValue(cardRank);
-      System.out.println("cardSuit is:" + cardSuit);
-      System.out.println("cardRank is:" + cardRank);
-      System.out.println("cardValue is:" + cardValue);
     }
+  }
+
+  public void setPlayerName(String newPlayer) {
+     this.playerName = playerName;
   }
  
   public String getCardSuit() {
@@ -56,5 +57,8 @@ public class Hand {
     return this.cardValue;  
   }
   
+  public String getPlayerName() {
+    return this.playerName;  
+  }
   
 }
