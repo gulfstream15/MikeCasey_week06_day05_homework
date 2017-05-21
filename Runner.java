@@ -25,6 +25,10 @@ class Runner {
     secondPlayerName = secondPlayerHand.getPlayerName();
 
     // Dealing starts 
+    System.out.println("");
+    System.out.println("***** Let's Start Dealing *****");
+    System.out.println("");
+
 
     // First player - first deal
 
@@ -60,6 +64,10 @@ class Runner {
 
     dealCount += 1;
 
+    System.out.println("");
+    System.out.println("***** End of Deal Number " + dealCount + " *****");
+    System.out.println("");
+
     // First player - second deal
 
     System.out.println("First Player: " + firstPlayerName);
@@ -93,6 +101,10 @@ class Runner {
     System.out.println(secondPlayerName + "'s current hand value is: " + secondPlayerHandValue); 
 
     dealCount += 1;
+
+    System.out.println("");
+    System.out.println("***** End of Deal Number " + dealCount + " *****");
+    System.out.println("");
 
     // First player - third deal
 
@@ -128,6 +140,9 @@ class Runner {
 
     dealCount += 1;
 
+    System.out.println("");
+    System.out.println("***** End of Deal Number " + dealCount + " *****");
+    System.out.println("");
 
   }
 }
