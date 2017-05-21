@@ -8,7 +8,7 @@ public class CardTest {
 
   @Before
   public void before() {
-    card = new Card ("1");
+    card = new Card ("1", "Hearts");
   }
 
   @Test

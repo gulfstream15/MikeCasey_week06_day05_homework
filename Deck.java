@@ -3,6 +3,8 @@ import java.util.*;
 public class Deck {
 
   private ArrayList<Card> deck;
+  private String rankArray[] = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"}; 
+  private String suitArray[] = {"Hearts", "Clubs", "Spades", "Diamonds"};
 
   public Deck() {
     this.deck = new ArrayList<Card>();
@@ -17,22 +19,12 @@ public class Deck {
   }
 
   public void createDeck(){
-  // Loop here for suits
-    deck.add(new Card("A"));
-    deck.add(new Card("2"));
-    deck.add(new Card("3"));
-    deck.add(new Card("4"));
-    deck.add(new Card("5"));
-    deck.add(new Card("6"));
-    deck.add(new Card("7"));
-    deck.add(new Card("8"));
-    deck.add(new Card("9"));
-    deck.add(new Card("10"));
-    deck.add(new Card("J"));
-    deck.add(new Card("Q"));
-    deck.add(new Card("K"));
+    for (int i = 0; i < suitArray.length; i++) {       
+      for (int j = 0; j < rankArray.length; j++) {
+         deck.add( new Card(rankArray[j], suitArray[i]) );
+      }
+    }
   }
 
-  
 
 }

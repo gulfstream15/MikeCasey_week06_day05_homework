@@ -26,13 +26,13 @@ public class DeckTest {
   @Test
   public void canCreateDeck(){
     deck.createDeck();
-    assertEquals(13, deck.deckSize());
+    assertEquals(52, deck.deckSize());
   }
 
   @Test
   public void getDeckSize(){
     deck.createDeck();
-    assertEquals(13, deck.deckSize());
+    assertEquals(52, deck.deckSize());
   }
 
 }
