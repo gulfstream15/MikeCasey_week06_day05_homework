@@ -13,31 +13,17 @@ public class DeckTest {
   }
 
   @Test
-  public void deckStartsEmpty(){
-    assertEquals(0, deck.deckSize());
-  }
-  
-  @Test
-  public void canAddOneCard(){
-    deck.addCard(card);
-    assertEquals(1, deck.deckSize());
-  }
-
-  @Test
   public void canCreateDeck(){
-    deck.createDeck();
     assertEquals(52, deck.deckSize());
   }
 
   @Test
   public void getDeckSize(){
-    deck.createDeck();
     assertEquals(52, deck.deckSize());
   }
 
   @Test
   public void canDealRandomCard() {
-    deck.createDeck();
     assertNotNull(deck.dealRandomCard());
   }
 
