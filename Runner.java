@@ -5,6 +5,7 @@ class Runner {
   private static String firstPlayerName;
   private static String secondPlayerName;
   private static int dealCount;
+  private static int maxValue;
 
   public static void main(String[] args) {
 
@@ -20,6 +21,7 @@ class Runner {
     firstPlayerHandValue = 0;
     secondPlayerHandValue = 0;
     dealCount = 0;
+    maxValue = 21;
  
     firstPlayerName  = firstPlayerHand.getPlayerName();
     secondPlayerName = secondPlayerHand.getPlayerName();
@@ -28,7 +30,6 @@ class Runner {
     System.out.println("");
     System.out.println("***** Let's Start Dealing *****");
     System.out.println("");
-
 
     // First player - first deal
 
@@ -45,6 +46,7 @@ class Runner {
     System.out.println("Card value is: " + firstPlayerHand.getCardValue());
  
     System.out.println(firstPlayerName + "'s current hand value is: " + firstPlayerHandValue);
+    System.out.println("");
 
     // Second player first deal
 
@@ -61,6 +63,7 @@ class Runner {
     System.out.println("Card value is: " + secondPlayerHand.getCardValue());
      
     System.out.println(secondPlayerName + "'s current hand value is: " + secondPlayerHandValue); 
+    System.out.println("");
 
     dealCount += 1;
 
@@ -83,6 +86,7 @@ class Runner {
     System.out.println("Card value is: " + firstPlayerHand.getCardValue());
      
     System.out.println(firstPlayerName + "'s current hand value is: " + firstPlayerHandValue);
+    System.out.println("");
 
     // Second player second deal
 
@@ -99,6 +103,7 @@ class Runner {
     System.out.println("Card value is: " + secondPlayerHand.getCardValue());
        
     System.out.println(secondPlayerName + "'s current hand value is: " + secondPlayerHandValue); 
+    System.out.println("");
 
     dealCount += 1;
 
@@ -121,6 +126,11 @@ class Runner {
     System.out.println("Card value is: " + firstPlayerHand.getCardValue());
       
     System.out.println(firstPlayerName + "'s current hand value is: " + firstPlayerHandValue);
+    System.out.println("");
+
+    if (firstPlayerHandValue > maxValue) {
+      System.out.println(firstPlayerName + " - you are busted!!!");
+    }
 
     // Second player third deal
 
@@ -137,6 +147,12 @@ class Runner {
     System.out.println("Card value is: " + secondPlayerHand.getCardValue());
        
     System.out.println(secondPlayerName + "'s current hand value is: " + secondPlayerHandValue);
+    System.out.println("");
+
+    if (secondPlayerHandValue > maxValue) {
+      System.out.println(secondPlayerName + " - you are busted!!!");
+    }
+
 
     dealCount += 1;
 
