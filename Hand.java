@@ -5,7 +5,7 @@ public class Hand {
   private ArrayList<Card> cardsInHand;
   private String playerName;  
   private int cardValue;
-  private int cardSuit;
+  private String cardSuit;
   private String cardRank;
   private int handValue;
 
@@ -33,15 +33,28 @@ public class Hand {
     return cardsInHand.size();
   }
 
-  public int getCardValue() {
+  public void setCardDetails() {
     for (Card card:cardsInHand) {
-      cardRank = card.getRank();
-      System.out.println("cardRank is: " +cardRank);
-      cardValue = card.getValue(cardRank);
-      System.out.println("cardValue in class is: " +cardValue);
+      this.cardSuit = card.getSuit();
+      this.cardRank = card.getRank();
+      this.cardValue = card.getValue(cardRank);
+      System.out.println("cardSuit is:" + cardSuit);
+      System.out.println("cardRank is:" + cardRank);
+      System.out.println("cardValue is:" + cardValue);
     }
-    return cardValue;
+  }
+ 
+  public String getCardSuit() {
+    return this.cardSuit;  
+  }
+
+  public String getCardRank() {
+    return this.cardRank;  
+  }
+
+  public int getCardValue() {
+    return this.cardValue;  
   }
   
-
+  
 }

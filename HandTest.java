@@ -24,10 +24,26 @@ public class HandTest {
   }
 
   @Test
+  public void cardHasSuit() {
+    hand.addCardToHandFromDeck();
+    hand.setCardDetails();
+    String cardSuit = hand.getCardSuit();
+    assertNotNull(cardSuit);
+  }
+
+  @Test
+  public void cardHasRank() {
+    hand.addCardToHandFromDeck();
+    hand.setCardDetails();
+    String cardRank = hand.getCardRank();
+    assertNotNull(cardRank);
+  }
+
+  @Test
   public void cardHasValue() {
     hand.addCardToHandFromDeck();
+    hand.setCardDetails();
     int cardValue = hand.getCardValue();
-    System.out.println("cardValue in test is: " +cardValue);
     assertNotNull(cardValue); 
   }
 
