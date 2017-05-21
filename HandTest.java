@@ -23,17 +23,12 @@ public class HandTest {
     assertNotNull(handSize); 
   }
 
-  // @Test
-  // public void getCardSize() {
-  //   card.CardToHandFromDeck();
-  //   assertEquals(1, hand.HandSize());
-  // }
-
-  // @Test
-  // public void cardHasValue() {
-  //   int cardValue = hand.getCardValue();
-  //   System.out.println("cardValue in test is: " +cardValue);
-  //   assertNotNull(cardValue); 
-  // }
+  @Test
+  public void cardHasValue() {
+    hand.addCardToHandFromDeck();
+    int cardValue = hand.getCardValue();
+    System.out.println("cardValue in test is: " +cardValue);
+    assertNotNull(cardValue); 
+  }
 
 }
