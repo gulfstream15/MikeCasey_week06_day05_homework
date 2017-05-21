@@ -35,4 +35,10 @@ public class DeckTest {
     assertEquals(52, deck.deckSize());
   }
 
+  @Test
+  public void canGetRandomCard() {
+    deck.createDeck();
+    assertNotNull(deck.getRandomCard());
+  }
+
 }
