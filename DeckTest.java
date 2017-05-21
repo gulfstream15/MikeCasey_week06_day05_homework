@@ -14,21 +14,25 @@ public class DeckTest {
 
   @Test
   public void deckStartsEmpty(){
-    assertEquals(0, deck.cardCount());
+    assertEquals(0, deck.deckSize());
   }
   
   @Test
   public void canAddOneCard(){
     deck.addCard(card);
-    assertEquals(1, deck.cardCount());
+    assertEquals(1, deck.deckSize());
   }
 
   @Test
-  public void canAddThreeCards(){
-    deck.addCard(card);
-    deck.addCard(card);
-    deck.addCard(card);
-    assertEquals(3, deck.cardCount());
+  public void canCreateDeck(){
+    deck.createDeck();
+    assertEquals(5, deck.deckSize());
+  }
+
+  @Test
+  public void getDeckSize(){
+    deck.createDeck();
+    assertEquals(5, deck.deckSize());
   }
 
 }

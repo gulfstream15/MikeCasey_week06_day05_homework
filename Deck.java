@@ -9,14 +9,21 @@ public class Deck {
   }
 
   public void addCard(Card card){
-      deck.add(card);
+    deck.add(card);
   }
 
-  public int cardCount(){
-     return deck.size();
-   }
+  public int deckSize(){
+    return deck.size();
+  }
 
+  public void createDeck(){
+    deck.add(new Card("1"));
+    deck.add(new Card("2"));
+    deck.add(new Card("3"));
+    deck.add(new Card("4"));
+    deck.add(new Card("5"));
+  }
 
-
+  
 
 }
