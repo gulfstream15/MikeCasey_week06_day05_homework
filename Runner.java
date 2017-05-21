@@ -153,7 +153,6 @@ class Runner {
       System.out.println(secondPlayerName + " - you are busted!!!");
     }
 
-
     dealCount += 1;
 
     System.out.println("");
