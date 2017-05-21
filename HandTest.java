@@ -16,10 +16,15 @@ public class HandTest {
 
   @Test
   public void canGetCardFromDeck() {
+    deck = new Deck();
     Card newCard = hand.CardToHandFromDeck();
-    System.out.println("newCard in test is "+ newCard);
-    // assertNotNull(hand.addCardToHandFromDeck()); 
+    assertNotNull(newCard); 
   }
 
+  // @Test
+  // public void cardHasValue() {
+  //   // int cardValue = hand.getCardValue();
+  //   // assertNotNull(cardValue); 
+  // }
 
 }
