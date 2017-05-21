@@ -3,14 +3,13 @@ import java.util.Random;
 
 public class Deck {
 
+  CardSuit suit;
+  CardRank rank;
   private ArrayList<Card> deck;
   private Random randomGenerator = new Random();
-  private String rankArray[] = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"}; 
-  private String suitArray[] = {"Hearts", "Clubs", "Spades", "Diamonds"};
-
+ 
   public Deck() {
     this.deck = new ArrayList<Card>();
-    // Call from here?
     // createDeck();
   }
  
@@ -23,14 +22,14 @@ public class Deck {
   }
 
   public void createDeck(){
-    for (int i = 0; i < suitArray.length; i++) {       
-      for (int j = 0; j < rankArray.length; j++) {
-         deck.add( new Card(rankArray[j], suitArray[i]) );
+    for (CardSuit suit : CardSuit.values()) {
+      for (CardRank rank : CardRank.values()) {
+         deck.add( new Card(rank.toString(), suit.toString()) );
       }
     }
   }
 
-  public Card getRandomCard() {
+  public Card dealRandomCard() {
     int index = randomGenerator.nextInt(deck.size());
     Card card = deck.get(index);
     return card;

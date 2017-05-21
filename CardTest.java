@@ -8,18 +8,30 @@ public class CardTest {
 
   @Before
   public void before() {
-    card = new Card ("1", "Hearts");
+    card = new Card ("JACK", "HEARTS");
   }
 
   @Test
-  public void canGetOneValue(){
-    int value = card.getValue("1");
+  public void canGetRank() {
+    card.setRank("JACK");
+    assertEquals("JACK", card.getRank());
+  }
+
+  @Test
+  public void canGetSuit() {
+    card.setSuit("CLUBS");
+    assertEquals("CLUBS", card.getSuit());
+  }
+
+  @Test
+  public void canGetAceValue(){
+    int value = card.getValue("ACE");
     assertEquals(1, value);
   }
 
   @Test
   public void canGetQueenValue(){
-    int value = card.getValue("Q");
+    int value = card.getValue("QUEEN");
     assertEquals(10, value);
   }
 

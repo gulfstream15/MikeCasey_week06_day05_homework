@@ -36,9 +36,9 @@ public class DeckTest {
   }
 
   @Test
-  public void canGetRandomCard() {
+  public void canDealRandomCard() {
     deck.createDeck();
-    assertNotNull(deck.getRandomCard());
+    assertNotNull(deck.dealRandomCard());
   }
 
 }

@@ -23,43 +23,43 @@ public class Card {
   public int getValue(String rank) {
     //Logic for ace 1 or 10?
     switch(rank) {
-      case "1":        
+      case "ACE":        
         value = 1;
         break;
-      case "2": 
+      case "TWO": 
         value = 2;
         break;
-      case "3": 
+      case "THREE": 
         value = 3;
         break;
-      case "4": 
+      case "FOUR": 
         value = 4;
         break;
-      case "5": 
+      case "FIVE": 
         value = 5;
         break;    
-      case "6": 
+      case "SIX": 
         value = 6;
         break;     
-      case "7": 
+      case "SEVEN": 
         value = 7;
         break;
-      case "8": 
+      case "EIGHT": 
         value = 8;      
         break;
-      case "9": 
+      case "NINE": 
         value = 9;
         break;       
-      case "10": 
+      case "TEN": 
         value = 10;
         break;
-      case "J": 
+      case "JACK": 
         value = 10;
         break;
-      case "Q": 
+      case "QUEEN": 
         value = 10;
         break;
-      case "K": 
+      case "KING": 
         value = 10;
         break;                   
     }
