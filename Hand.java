@@ -24,11 +24,24 @@ public class Hand {
     this.handValue  = handValue;
   }
 
-  public Card CardToHandFromDeck() {  
+  public void addCardToHandFromDeck() {
     Card newCard = deck.dealRandomCard();
-    cardsInHand.add(newCard);
-    return newCard;
+    cardsInHand.add(newCard); 
   }
 
+  public int HandSize() {
+    return cardsInHand.size();
+  }
+
+  // public int getCardValue() {
+  //   for (Card card:cardsInHand) {
+  //     cardRank = card.getRank();
+  //     System.out.println("cardRank is: " +cardRank);
+  //     cardValue = card.getValue(cardRank);
+  //     System.out.println("cardValue in class is: " +cardValue);
+  //   }
+  //   return cardValue;
+  // }
+  
 
 }
