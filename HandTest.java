@@ -15,6 +15,12 @@ public class HandTest {
     card = new Card(); 
   }
 
+  // An empty test is worth having here
+  // @Test
+  //   public void handStartsEmpty() {
+  //   assertEquals(0, hand.numberOfCards());
+  // }
+
   @Test
   public void playerName() {
     assertEquals("Mike", hand.getPlayerName());

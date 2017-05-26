@@ -1,4 +1,4 @@
-public enum CardRank {
+public enum Rank {
   ACE,
   TWO,
   THREE,

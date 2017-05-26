@@ -1,4 +1,4 @@
-public enum CardSuit {
+public enum Suit {
   HEARTS,
   CLUBS,
   DIAMONDS,

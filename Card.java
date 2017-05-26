@@ -1,84 +1,45 @@
-import java.util.ArrayList;
 
 public class Card {
     
   private int value;
-  private String rank;
-  private String suit;
+
+  private Rule rule;
+  private Suit suit;
+  private Rank rank;
 
   public Card() {
 
   }
 
-  public Card(String rank, String suit) {
+  public Card(Suit suit, Rank rank) {
     this.rank = rank; 
     this.value = value; 
     this.suit = suit;
   }
 
-  public String getRank() {
+  public Rank getRank() {
     return this.rank;
   }
 
-  public void setRank(String newRank) {
+  public void setRank(Rank newRank) {
     this.rank = newRank;
   }
 
-  public int getValue(String rank) {
-    //Logic for ace 1 or 10?
-    switch(rank) {
-      case "ACE":        
-        value = 1;
-        break;
-      case "TWO": 
-        value = 2;
-        break;
-      case "THREE": 
-        value = 3;
-        break;
-      case "FOUR": 
-        value = 4;
-        break;
-      case "FIVE": 
-        value = 5;
-        break;    
-      case "SIX": 
-        value = 6;
-        break;     
-      case "SEVEN": 
-        value = 7;
-        break;
-      case "EIGHT": 
-        value = 8;      
-        break;
-      case "NINE": 
-        value = 9;
-        break;       
-      case "TEN": 
-        value = 10;
-        break;
-      case "JACK": 
-        value = 10;
-        break;
-      case "QUEEN": 
-        value = 10;
-        break;
-      case "KING": 
-        value = 10;
-        break;                   
-    }
-    return value;   
+  public int getValue(Rank rank) {
+    rule = new Rule(rank.toString());
+    int value = rule.getValueFromRank(rank.toString());
+    return value;
   }
 
   public void setValue(int newValue) {
     this.value = newValue;
   }  
 
-  public String getSuit() {
+  public Suit getSuit() {
     return this.suit;
   }
 
-  public void setSuit(String newSuit) {
+  public void getSuit(Suit newSuit) {
     this.suit = newSuit;
   }
  

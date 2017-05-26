@@ -14,6 +14,9 @@ public class Hand {
   public Hand() {
 
   }
+
+  // It is better to seperate out the playerName
+  // into a seperate class
  
   public Hand(String playerName) {
     this.cardsInHand = new ArrayList<Card>();
@@ -23,6 +26,16 @@ public class Hand {
     this.cardRank   = cardRank;
     this.handValue  = handValue;
   }
+
+  // // Model answer method to calculate number 
+  // // of cards - for MVP only one needed
+  // public int numberOfCards() {
+  //   if (null == card) {
+  //     return 0;
+  //   } else {
+  //     return 1;
+  //   }
+  // }
 
   public void addCardToHandFromDeck() {
     Card newCard = deck.dealRandomCard();

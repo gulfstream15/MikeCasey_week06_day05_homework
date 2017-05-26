@@ -3,8 +3,8 @@ import java.util.Random;
 
 public class Deck {
 
-  CardSuit suit;
-  CardRank rank;
+  private CardSuit suit;
+  private CardRank rank;
   private ArrayList<Card> deck;
   private Random randomGenerator = new Random();
  

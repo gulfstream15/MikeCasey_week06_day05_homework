@@ -9,8 +9,7 @@ class Runner {
 
   public static void main(String[] args) {
 
-    // Deck constructor builds a 52 card
-    // deck 
+    // Deck constructor builds a 52 card deck
     Deck deck = new Deck();
     Card card = new Card();
  
